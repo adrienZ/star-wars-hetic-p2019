@@ -1,0 +1,20 @@
+{
+  "name": "Stars wars projet HETIC",
+  "homepage": "https://github.com/adrienZ/Boilerplate",
+  "authors": [
+    "Adrien Zaganelli"
+  ],
+  "description": "work in progress",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "star",
+    "wars",
+    "hetic"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "jquery-ui": "jqueryui#~1.11.4"
+  }
+}

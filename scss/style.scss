@@ -1,0 +1,56 @@
+body {
+    background: #0e3d87;
+    overflow: visible;
+}
+
+.map-img {
+    background: url(../img/map_of_the_internet_quadrant_1__by_the9988-d70bbyj.jpg) no-repeat center center;
+    height: 2000px;
+    background-size: cover;
+    width: 2000px;
+    display: none;
+}
+
+.map {
+    height: auto;
+    overflow: visible;
+    width: 5000px;
+}
+
+.case {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    margin-left: 5px;
+    background: #0e3d87;
+    border: 1px solid rgba(255, 255, 255, 0.21);
+}
+
+.case:hover {
+    background: #1563df;
+    border: 1px solid white;
+}
+
+.yavin {
+    height: 50px;
+    width: 50px;
+    margin-left: 5px;
+    background: green;
+    display: inline-block;
+}
+
+.mustafar {
+    height: 50px;
+    width: 50px;
+    margin-left: 5px;
+    background: red;
+    display: inline-block;
+}
+
+.naboo {
+    height: 50px;
+    width: 50px;
+    margin-left: 5px;
+    background: #6cbbde;
+    display: inline-block;
+}
