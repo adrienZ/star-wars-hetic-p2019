@@ -1,0 +1,90 @@
+$ui-bg: #292929;
+$ui-shadow: 0px 2px 20px 5px #1156f2;
+$steps-height: 35px;
+body {
+    background: url(http://www.twitterevolutions.com/bgs/space.jpg) no-repeat center center;
+    color: white;
+}
+
+.info-panel {
+    float: left;
+    position: relative;
+    left: 5%;
+    display: inline-block;
+    width: 20%;
+    height: 500px;
+    background: $ui-bg;
+    box-shadow: $ui-shadow;
+    ul {
+        display: inline-block;
+        li {
+            padding-top: 20px;
+            font-size: 18px;
+        }
+    }
+}
+
+.visual-panel {
+    width: 50%;
+    margin: auto;
+    img {
+        width: 30%;
+        height: auto;
+        margin-left: 20%;
+    }
+}
+
+.event-panel {
+    float: right;
+    right: 5%;
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    width: 20%;
+    height: 500px;
+    background: $ui-bg;
+    box-shadow: $ui-shadow;
+    span {
+        z-index: 0;
+        width: 2px;
+        position: absolute;
+        z-index: 0;
+        height: 300px;
+        background: white;
+        top: $steps-height + 15.5px;
+        left: 17.5px;
+    }
+    .three {
+        height: inherit;
+    }
+    .steps {
+        height: 35px;
+        margin-top: 35px;
+        width: 100%;
+        z-index: 1;
+        border-bottom: thin solid white;
+        .round_btn {
+            width: 35px;
+            height: 35px;
+            z-index: 1;
+            border-radius: 50%;
+            background: green;
+            box-sizing: border-box;
+            display: inline-block;
+            border: 2px solid white;
+            vertical-align: middle;
+        }
+        p {
+            display: inline-block;
+            padding-left: 5px;
+        }
+    }
+}
+
+iframe {
+    min-width: 75vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+}

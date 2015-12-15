@@ -16,8 +16,8 @@ var mustafar = {
 }
 
 
-for (var i = 0; i < 20; i++) {
-    for (var j = 0; j < 20; j++) {
+for (var i = 0; i < 40; i++) {
+    for (var j = 0; j < 40; j++) {
 
         if (i == yavin.y && j === yavin.x) {
             $(".map").append('<div class="yavin" id="col_' + yavin.x + 'line_' + yavin.y + '"></div>');

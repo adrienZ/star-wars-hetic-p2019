@@ -1,20 +1,22 @@
 {
-  "name": "Stars wars projet HETIC",
-  "homepage": "https://github.com/adrienZ/Boilerplate",
-  "authors": [
-    "Adrien Zaganelli"
+    "name": "Stars wars projet HETIC",
+    "homepage": "https://github.com/adrienZ/Boilerplate",
+    "authors": [
+    "Adrien Zaganelli, Maelle Gaonac'h, Galla Pillot, Mélissandre Pozo, Julien Girardeau"
   ],
-  "description": "work in progress",
-  "main": "index.html",
-  "moduleType": [],
-  "keywords": [
+    "description": "work in progress",
+    "main": "index.html",
+    "moduleType": [],
+    "keywords": [
     "star",
     "wars",
-    "hetic"
+    "hetic",
   ],
-  "license": "MIT",
-  "dependencies": {
-    "jquery": "~2.1.4",
-    "jquery-ui": "jqueryui#~1.11.4"
-  }
+    "license": "MIT",
+    "dependencies": {
+        "jquery": "~2.1.4",
+        "jquery-ui": "jqueryui#~1.11.4",
+        "handlebars": "~4.0.5",
+        "modernizr": "~3.2.0"
+    }
 }
