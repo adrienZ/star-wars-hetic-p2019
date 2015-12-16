@@ -1,0 +1,67 @@
+                $grid: 30px;
+                body {
+                    overflow: scroll;
+                    //    background: url(http://r.ddmcdn.com/w_640/h_360/gif/videos/dnews-black-space-hero.jpg) center center;
+                }
+                
+                .planets img {
+                    border-radius: 50%;
+                    box-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
+                    transition: all 0.3s ease-in-out;
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        z-index: -1;
+                        width: 100%;
+                        height: 100%;
+                        opacity: 0;
+                        border-radius: 5px;
+                        box-shadow: 0 5px 15px rgba(255, 255, 255, 1);
+                        transition: opacity 0.3s ease-in-out;
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+                }
+                
+                .slide {
+                    width: 100vw;
+                    height: 100vh;
+                    position: relative;
+                    transition: 1s;
+                    display: inline-block;
+                    &.galaxy {
+                        //                        animation: galaxy 2s;
+                    }
+                    &.zoom {
+                        //                        animation: zoom 2s;
+                    }
+                }
+                
+                //                @keyframes galaxy {
+                //                    0% {
+                //                        transform: translateX(0%) translateZ(0) translate3d(0, 0, 0);
+                //                        backface-visibility: hidden;
+                //                        perspective: 1000;
+                //                    }
+                //                    100% {
+                //                        transform: translateX(-100%) translateZ(0) translate3d(0, 0, 0);
+                //                        backface-visibility: hidden;
+                //                        perspective: 1000;
+                //                    }
+                //                }
+                //                
+                //                @keyframes zoom {
+                //                    0% {
+                //                        transform: translateX(100%) translateY(-100%) translateZ(0) translate3d(0, 0, 0);
+                //                        backface-visibility: hidden;
+                //                        perspective: 1000;
+                //                        ;
+                //                    }
+                //                    100% {
+                //                        transform: translateX(0%) translateY(-100%) translateZ(0) translate3d(0, 0, 0);
+                //                        backface-visibility: hidden;
+                //                        perspective: 1000;
+                //                        ;
+                //                    }
+                //                }
