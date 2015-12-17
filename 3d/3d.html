@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Super Website</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- Insert this script -->
+    <script type="text/javascript" src="https://d2f25wgezub9nf.cloudfront.net/api/sketchfab-viewer-1.0.0.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <!--    <link rel="stylesheet" href="css/style.css">-->
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">           </script>
+        <![endif]-->
+</head>
+
+<body>
+
+    <!-- Insert an empty iframe -->
+    <iframe src="" id="api-frame" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    <script src="js/jquery-2.1.4.min.js"></script>
+
+    <!-- Initialize the viewer -->
+    <script type="text/javascript">
+        var iframe = document.getElementById('api-frame');
+        var version = '1.0.0';
+        var urlid = '9ada9c6edc1c4509bb413b903c0824f4';
+        var client = new Sketchfab(version, iframe);
+
+        client.init(urlid, {
+            autospin: 0.2,
+            transparent: 1,
+            ui_infos: 0,
+            ui_controls: 1,
+            ui_stop: 0,
+            scrollwheel: 1,
+            preload: 1,
+            success: function onSuccess(api) {
+
+                api.start();
+                api.addEventListener('viewerready', function () {
+                    console.log('Viewer is ready');
+
+                });
+                api.getNodeMap(function (err, nodes) {
+                    if (!err) {
+                        console.log(nodes);
+                        api.hide(nodes.instanceID, function (e) {
+
+                        })
+
+                    }
+                });
+
+
+                api.getTextureList(function (err, textures) {
+                    console.log(textures);
+                });
+
+            },
+            error: function onError() {
+                console.log('Viewer error');
+            }
+        });
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
+    <script>
+        setInterval(function () {
+            console.log(document.querySelector("html iframe").contentWindow.document);
+        }, 4000);
+
+
+        document.querySelector("html iframe").addEventListener("onload", function () {
+            console.log(document.querySelector("html iframe").contentWindow.document);
+        })
+    </script>
+</body>
+
+<!-- ------------- CDN LINKS -------------
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.2/handlebars.min.js"></script>
+-->
+
+
+</html>
