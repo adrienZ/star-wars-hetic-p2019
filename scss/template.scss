@@ -152,10 +152,21 @@ body {
     }
 }
 
-iframe {
+iframe,
+.video {
     min-width: 100vw;
-    position: absolute;
     top: 0;
     left: 0;
     min-height: 100vh;
+}
+
+.close {
+    height: 50px;
+    width: 50px;
+    background: url(http://www.clker.com/cliparts/t/f/J/i/7/C/amazon-style-close-button-hi.png) no-repeat center center;
+    background-size: contain;
+    position: absolute;
+    z-index: 1;
+    top: 50px;
+    left: 30px;
 }
