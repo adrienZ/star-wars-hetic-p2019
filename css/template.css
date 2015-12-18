@@ -7,6 +7,7 @@
 body {
     color: white;
     font-family: "M";
+    overflow: hidden;
 }
 
 .info-panel {
@@ -133,6 +134,7 @@ body {
 }
 
 .event-panel .steps .round_btn {
+    background-size: contain!important;
     width: 35px;
     height: 35px;
     z-index: 1;
@@ -142,6 +144,13 @@ body {
     box-sizing: border-box;
     display: inline-block;
     vertical-align: middle;
+    -webkit-transition: -webkit-transform 0.15s;
+    transition: transform 0.15s;
+}
+
+.event-panel .steps .round_btn:hover {
+    -webkit-transform: scale(1.5, 1.5) translateZ(0);
+    transform: scale(1.5, 1.5) translateZ(0);
 }
 
 .event-panel .steps .round_btn:before {
@@ -156,6 +165,8 @@ body {
     left: -8.5%;
 }
 
+
+/*
 .event-panel .steps .round_btn:after {
     content: "";
     width: 4px;
@@ -166,6 +177,7 @@ body {
     top: 2.5px;
     left: 2.5px;
 }
+*/
 
 .event-panel .steps p {
     display: inline-block;
@@ -184,7 +196,8 @@ body {
     display: inline-block;
     font-family: "M";
     font-size: 3vw;
-    letter-spacing: 1vw;
+    position: relative;
+    top: 20px;
     text-transform: uppercase;
 }
 
@@ -192,7 +205,7 @@ body {
     height: 2px;
     width: 25%;
     display: inline-block;
-    margin-top: 15px;
+    margin-top: 35px;
     background: white;
 }
 
@@ -228,7 +241,7 @@ iframe,
 .close {
     height: 50px;
     width: 50px;
-    background: url(http://www.clker.com/cliparts/t/f/J/i/7/C/amazon-style-close-button-hi.png) no-repeat center center;
+    background: url(http://adrienzaganelli.com/star-wars/img/cross-icon.png) no-repeat center center;
     background-size: contain;
     position: absolute;
     z-index: 2;
@@ -241,7 +254,8 @@ iframe,
     position: absolute;
     top: 0;
     left: 50px;
+    color: #212121;
     z-index: 1;
-    background: black;
+    background: white;
     padding: 10px 20px 25px 20px;
 }

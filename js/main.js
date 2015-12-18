@@ -22,15 +22,15 @@ var ø = {
     // kinda json on client slide; x & y stand for coords
     planets = [{
         name: "Endor",
-        x: 1.7,
-        y: 4.3,
+        x: 1.3,
+        y: 4.0,
         img: "../star-wars/img/2d/endor.png",
         pos: index++,
         id: 7,
         three_d: "../star-wars/img/3d/endor.png",
 }, {
         name: "Bespin",
-        x: 1.9,
+        x: 1.5,
         y: 4.8,
         img: "../star-wars/img/2d/bespin.png",
         three_d: "../star-wars/img/3d/bespin.png",
@@ -38,8 +38,8 @@ var ø = {
         id: 6,
 }, {
         name: "Hoth",
-        x: 1.6,
-        y: 5.3,
+        x: 1.2,
+        y: 5.5,
         img: "../star-wars/img/2d/hoth.png",
         three_d: "../star-wars/img/3d/hoth.png",
         pos: index++,
@@ -54,15 +54,15 @@ var ø = {
         id: 15,
 }, {
         name: "Mustafar",
-        x: 2.6,
-        y: 5.0,
+        x: 2.9,
+        y: 4.6,
         img: "../star-wars/img/2d/mustafar.png",
         three_d: "../star-wars/img/3d/mustafar.png",
         pos: index++,
         id: 13,
 }, {
         name: "Utapau",
-        x: 3.1,
+        x: 3.3,
         y: 5.7,
         img: "../star-wars/img/2d/utapau.png",
         three_d: "../star-wars/img/3d/utapau.png",
@@ -70,8 +70,8 @@ var ø = {
         id: 12,
 }, {
         name: "Dagobah",
-        x: 3.2,
-        y: 5.6,
+        x: 3.3,
+        y: 5.7,
         img: "../star-wars/img/2d/dagobah.png",
         three_d: "../star-wars/img/3d/dagobah.png",
         pos: index++,
@@ -79,13 +79,13 @@ var ø = {
 }, {
         name: "Naboo",
         x: 4.1,
-        y: 4.9,
+        y: 4.5,
         img: "../star-wars/img/2d/naboo.png",
         three_d: "../star-wars/img/3d/naboo.png",
         pos: index++,
         id: 8,
 }, {
-        name: "Corusant",
+        name: "Coruscant",
         x: 4.7,
         y: 2.6,
         img: "../star-wars/img/2d/corusant.png",
@@ -101,17 +101,17 @@ var ø = {
         pos: index++,
         id: 16,
 }, {
-        name: "Aldeeran",
+        name: "Alderaan",
         x: 5.5,
-        y: 2.8,
+        y: 2.4,
         img: "../star-wars/img/2d/alderaan.png",
-        three_d: "../star-wars/img/3d/aldeeran.png",
+        three_d: "../star-wars/img/3d/alderaan.png",
         pos: index++,
         id: 2,
 }, {
         name: "Cato Neimoidia",
-        x: 5.5,
-        y: 3.1,
+        x: 5.7,
+        y: 3.3,
         img: "../star-wars/img/2d/cato_neimoidia.png",
         three_d: "../star-wars/img/3d/cato_neimoidia.png",
         pos: index++,
@@ -124,19 +124,19 @@ var ø = {
         three_d: "../star-wars/img/3d/kamino.png",
         pos: index++,
         id: 10,
-        three_d: "../star-wars/img/tatooine_3d.png",
+        three_d: "../star-wars/img/3d/kamino.png",
 }, {
         name: "Tatooine",
-        x: 5,
-        y: 5.2,
+        x: 4.7,
+        y: 4.9,
         img: "../star-wars/img/2d/tatooine.png",
         three_d: "../star-wars/img/3d/tatooine.png",
         pos: index++,
         id: 1,
 }, {
         name: "Geonosis",
-        x: 5.1,
-        y: 5.5,
+        x: 5.3,
+        y: 5.7,
         img: "../star-wars/img/2d/geonosis.png",
         three_d: "../star-wars/img/3d/geonosis.png",
         pos: index++,
@@ -146,14 +146,14 @@ var ø = {
         x: 6.5,
         y: 1.8,
         img: "../star-wars/img/2d/yavin_iv.png",
-        three_d: "../star-wars/img/3d/yavin°iv.png",
+        three_d: "../star-wars/img/3d/yavin_iv.png",
 
 
         pos: index++,
         id: 3,
 }, {
         name: "Kashyyyk",
-        x: 6.4,
+        x: 6.5,
         y: 3.5,
         img: "../star-wars/img/2d/kashyyyk.png",
         three_d: "../star-wars/img/3d/kashyyyk.png",
@@ -169,8 +169,8 @@ var ø = {
         id: 17,
 }, {
         name: "Saleucami",
-        x: 7,
-        y: 3.7,
+        x: 7.4,
+        y: 3.8,
         img: "../star-wars/img/2d/saleucami.png",
         three_d: "../star-wars/img/3d/saleucami.png",
         pos: index++,
@@ -258,7 +258,8 @@ for (var t = 0; t < ø.all(".planets img").length; t++) {
                 for (var j = 0; j < Object.keys(events).length; j++) {
                     events_all[j] = {
                         link: events[j][0],
-                        name: events[j][1],
+                        img: events[j][1],
+                        name: events[j][2],
                     };
                 }
                 //templating each events with handlebars.js
@@ -337,6 +338,7 @@ for (var t = 0; t < ø.all(".planets img").length; t++) {
 
                         });
                     });
+
                 }
             });
 
@@ -358,7 +360,6 @@ function showName(e) {
 
 function hideName(e) {
     e.parentNode.getElementsByTagName("span")[0].style.display = "none";
-
 }
 
 

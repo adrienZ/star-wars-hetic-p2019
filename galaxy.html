@@ -6,7 +6,7 @@
     <title>My Super Website</title>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/stars.css">
+    <!--<link rel="stylesheet" href="css/stars.css">-->
     <link rel="stylesheet" href="css/map.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/template.css">
@@ -18,7 +18,7 @@
 </head>
 
 <body>
-
+    <canvas class="background"></canvas>
     <div id='stars'></div>
     <div id='stars2'></div>
     <div id='stars3'></div>
@@ -95,7 +95,8 @@
     </script>
     <script id="data_event_template" type="text/x-handlebars-template">
         <div class="steps">
-            <div class="round_btn" data-src="{{link}}"></div>
+            <div class="round_btn" data-src="{{link}}" style="background:url({{img}}) no-repeat center center" onmouseover="                    audio = new Audio([' https://www.freesound.org/data/previews/288/288964_5123851-lq.mp3 ']); audio.volume = 0.3; audio.play();
+"></div>
             <p>{{name}}</p>
         </div>
 
@@ -118,8 +119,7 @@
 
     <script src=" js/main.js "></script>
     <script src="bower_components/jquery-ui/jquery-ui.js "></script>
-    <script>
-    </script>
+    <script src="js/galaxy.js"></script>
 
 </body>
 
