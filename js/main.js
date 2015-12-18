@@ -169,8 +169,8 @@ var ø = {
         id: 17,
 }, {
         name: "Saleucami",
-        x: 3.7,
-        y: 7,
+        x: 7,
+        y: 3.7,
         img: "../star-wars/img/2d/saleucami.png",
         three_d: "../star-wars/img/3d/saleucami.png",
         pos: index++,
@@ -178,7 +178,8 @@ var ø = {
 }],
     //interactions
     to_ui = ["translateX(-100%) translateZ(0) translate3d(0, 0, 0)", "translateX(-0%) translateY(-100%) translateZ(0) translate3d(0, 0, 0)"],
-    to_map = ["translateX(-0%) translateZ(0) translate3d(0, 0, 0)", "translateX(-0%) translateY(0%) translateZ(0) translate3d(0, 0, 0)"];
+    to_map = ["translateX(-0%) translateZ(0) translate3d(0, 0, 0)", "translateX(-0%) translateY(0%) translateZ(0) translate3d(0, 0, 0)"],
+    audio = null;
 
 
 // Inject Planets in DOM with their coords (not responsive)
@@ -236,22 +237,22 @@ for (var t = 0; t < ø.all(".planets img").length; t++) {
             // Second API Call from our own API and get the best moment on the current planet
             $.getJSON("http://adrienzaganelli.com/star-wars/api/" + api_call + ".json", function (data) {
                 var x = 0; //debug
-
+                console.log(data);
                 //the following code is not very good, i could use one data to read all the events if i had more time
                 // first formating
                 var events = {};
                 for (var i in data[api_call]) {
-                    //console.log(data[api_call][i], Object.keys(data[api_call])[x]);
+                    console.log(data[api_call][i], Object.keys(data[api_call])[x]);
                     events[x] = data[api_call][i] + "XXX" + Object.keys(data[api_call])[x];
                     events[x] = events[x].split("XXX");
                     x++;
-                    //console.log(events);
+                    console.log(events);
                 }
                 x = 0; //debug
 
 
 
-                //console.log(Object.keys(events).length, events);
+                console.log(Object.keys(events).length, events);
                 // second data formating
                 var events_all = {};
                 for (var j = 0; j < Object.keys(events).length; j++) {
@@ -320,8 +321,8 @@ for (var t = 0; t < ø.all(".planets img").length; t++) {
                 for (var i = 0; i < ø.all(".round_btn").length; i++) {
 
                     ø.all(".round_btn")[i].addEventListener("click", function () {
-                        console.clear();
                         ø.el(".video").innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + this.getAttribute("data-src") + '?modestbranding=1&autoplay=1&controls=1&showinfo=0&rel=0" frameborder="0" allowfullscreen class=" animated slideInLeft "></iframe>';
+                        console.clear();
                         ø.el(".video").style.visibility = "visible";
                         ø.el(".close").style.visibility = "visible";
                         ø.el("#return").style.visibility = "hidden";
@@ -348,7 +349,17 @@ for (var t = 0; t < ø.all(".planets img").length; t++) {
     });
 }
 
+function showName(e) {
+    e.parentNode.getElementsByTagName("span")[0].style.display = "inline";
+    audio = new Audio(["https://www.freesound.org/data/previews/288/288964_5123851-lq.mp3"]);
+    audio.volume = 0.3;
+    audio.play();
+}
 
+function hideName(e) {
+    e.parentNode.getElementsByTagName("span")[0].style.display = "none";
+
+}
 
 
 ø.el(".info-panel").addEventListener("click", function () {

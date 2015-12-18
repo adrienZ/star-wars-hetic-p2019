@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/stars.css">
     <link rel="stylesheet" href="css/map.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/template.css">
     <link rel="stylesheet" href="css/theme.css">
 
@@ -107,8 +108,9 @@
 
 
     <script id="template-planets" type="text/x-handlebars-template">
-        <div class="planets" style="position:absolute;height:50px;width:50px;top:{{y}}px;left:{{x}}px;">
-            <img src="{{img}}" id="{{name}}" alt="name" width="70" height="70" data-id="{{id}}" data-index="{{pos}}" data-viz="{{three_d}}">
+        <div class="planets animated fadeIn" style="position:absolute;height:50px;width:50px;top:{{y}}px;left:{{x}}px;">
+            <img src="{{img}}" id="{{name}}" alt="name" width="70" height="70" data-id="{{id}}" data-index="{{pos}}" data-viz="{{three_d}}" onmouseover="showName(this)" onmouseleave="hideName(this)">
+            <span>{{name}}</span>
         </div>
     </script>
 

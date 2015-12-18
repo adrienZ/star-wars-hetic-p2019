@@ -25,9 +25,18 @@
     <script type="text/javascript">
         var iframe = document.getElementById('api-frame');
         var version = '1.0.0';
-        var urlid = '9ada9c6edc1c4509bb413b903c0824f4';
+        var urlid = 'f0149bc69119406ea46aa45d1074aaf7';
         var client = new Sketchfab(version, iframe);
 
+        function loadModel(client, urlid) {
+            console.log('loading a model');
+            client.init(urlid, {
+                success: success,
+                error: error,
+                /* This is where you can add additional options like Autospin */
+                autospin: 0.5
+            });
+        }
         client.init(urlid, {
             autospin: 0.2,
             transparent: 1,

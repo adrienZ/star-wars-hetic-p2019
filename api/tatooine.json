@@ -3,6 +3,13 @@
         "Boonta Eve Classic Pod Race": "6AtIRu0034E",
         "Darth Maul VS Qui-Gon Jinn": "HdJnoL4KR8g",
         "Luke receives his father’s lightsaber": "pUaxXsqGeFI"
+    },
+    "img": {
+        "0": 'http://adrienzaganelli.com/star-wars/img/events/tatooine_event_1.png',
+        "1": 'http://adrienzaganelli.com/star-wars/img/events/tatooine_event_2.png',
+        "2": 'http://adrienzaganelli.com/star-wars/img/events/tatooine_event_3.png'
+
     }
+
 
 }

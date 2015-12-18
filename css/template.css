@@ -93,7 +93,7 @@ body {
 
 .event-panel .steps {
     position: fixed;
-    height: 35px;
+    height: auto;
     margin-top: 35px;
     width: 20%;
     z-index: 0;
@@ -119,19 +119,16 @@ body {
 }
 
 .event-panel .steps:nth-child(3) .round_btn {
-    background: url('http://adrienzaganelli.com/star-wars/img/events/tatooine_event_2.png') no-repeat center center;
     background-size: contain;
     float: right;
 }
 
 .event-panel .steps:nth-child(2) .round_btn {
-    background: url('http://adrienzaganelli.com/star-wars/img/events/tatooine_event_3.png') no-repeat center center;
     background-size: contain;
     float: right;
 }
 
 .event-panel .steps:nth-child(1) .round_btn {
-    background: url('http://adrienzaganelli.com/star-wars/img/events/tatooine_event_1.png') no-repeat center center;
     background-size: contain;
 }
 
@@ -139,11 +136,35 @@ body {
     width: 35px;
     height: 35px;
     z-index: 1;
+    position: relative;
     border-radius: 50%;
     background: green;
     box-sizing: border-box;
     display: inline-block;
     vertical-align: middle;
+}
+
+.event-panel .steps .round_btn:before {
+    content: "";
+    width: 120%;
+    height: 120%;
+    border: 1px solid white;
+    ;
+    border-radius: 50%;
+    position: absolute;
+    top: -8.5%;
+    left: -8.5%;
+}
+
+.event-panel .steps .round_btn:after {
+    content: "";
+    width: 4px;
+    height: 4px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 2.5px;
+    left: 2.5px;
 }
 
 .event-panel .steps p {
